@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script
+            src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous"></script>
+
+
+
+</head>
+<body>
+
+<div class="row" >
+    <div class="col-md-2">
+        <a href="./index.html">返回首页</a>
+    </div>
+    <div class="col-md-10 text-center" >
+        <h4>redis web cli</h4>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-4" id="key-message">
+        <h3>key 值信息</h3>
+        <div class="row" >
+            <div class="col-md-12" >
+                <span>过期时间:</span>
+                <span id="ttl"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12" >
+                <span>类型:</span>
+                <span id="type">过期时间:</span>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-8">
+        <div class="row" id="key-value">
+
+        </div>
+    </div>
+</div>
+<script type="application/javascript" src="./function.js"></script>
+<script type="application/javascript" src="./app.js"></script>
+</body>
+</html>
