@@ -13,14 +13,18 @@ class RedisCli
     /**
      * RedisCli constructor.
      * @param $redis
+     * @throws Exception
      */
-    public function __construct()
+    public function __construct($redisConfig)
     {
         try{
             $this->redis = new Redis();
-            $this->redis->connect('127.0.0.1',6379);
+            $this->redis->connect($redisConfig['host'],$redisConfig['port']);
+            if($redisConfig['password'] != null){
+                $this->redis->auth($redisConfig['password']);
+            }
         }catch (Exception $e){
-           var_dump($e) ;
+           throw new Exception("redis 连接错误");
         }
     }
     
